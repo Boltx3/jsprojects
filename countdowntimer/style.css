@@ -2,9 +2,38 @@
 
 * {
     box-sizing: border-box;
+    color: white;
 }
 
 body {
+    background-image: url("background.jpg"); 
     font-family: "Oswald", sans-serif;
-    margin: 0px;
+    margin: 0;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    display: flex;
+    margin-top: 10rem;
+    font-size: 4rem;
+}
+
+.countdown-div {
+    display: flex;
+}
+
+
+.timertext {
+    font-size: 6rem;
+    margin: 0 2rem;
+    line-height: 1;
+}
+
+.countdown {
+    text-align: center;
+}
+
+.countdown span {
+    font-size: 1rem;
 }
