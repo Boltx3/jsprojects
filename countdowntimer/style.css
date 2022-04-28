@@ -15,8 +15,10 @@ body {
 
 h1 {
     display: flex;
+    justify-content: center;
     margin-top: 10rem;
     font-size: 4rem;
+    align-content:center;
 }
 
 .countdown-div {
@@ -30,8 +32,10 @@ h1 {
     line-height: 1;
 }
 
-.countdown {
+.countdown-div {
     text-align: center;
+    display: center;
+    justify-content: center;
 }
 
 .countdown span {
