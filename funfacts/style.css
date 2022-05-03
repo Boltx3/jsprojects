@@ -7,3 +7,9 @@
 body {
     font-family: "Oswald", "sans-serif";
 }
+
+.facttext {
+    font-size: 6rem;
+    margin: 0 2rem;
+    line-height: 1;
+}

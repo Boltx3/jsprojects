@@ -1,11 +1,18 @@
-const daysElement = document.getElementById("factfun");
+const apiurl = "https://uselessfacts.jsph.pl/random.json";
+const factel = document.getElementById("funfact");
 
-async function newfact(){
-    const quote = await fetch('https://api.aakhilv.me/fun/facts?num=1');
-    const quoteresult = await response.json();
 
-    console.log(quote.quoteresult);
-    const newquote = quote.quoteresult[1];
+async function newfact() {
+    const quote = await fetch(apiurl);
+    const resultdata = await quote.json();
+
+    console.log(resultdata.text);
+    console.log(resultdata.id);
+    console.log(resultdata.source_url);
+    console.log(resultdata.permalink);
+    console.log(resultdata.language);
+
+    return resultdata;
 }
 
 newfact();
