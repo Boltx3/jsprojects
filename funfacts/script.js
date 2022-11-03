@@ -5,14 +5,13 @@ const factel = document.getElementById("funfact");
 async function newfact() {
     const quote = await fetch(apiurl);
     const resultdata = await quote.json();
-
-    console.log(resultdata.text);
-    console.log(resultdata.id);
-    console.log(resultdata.source_url);
-    console.log(resultdata.permalink);
-    console.log(resultdata.language);
-
+    console.log(resultdata)
     return resultdata;
+}
+
+function displayFact (data){
+    const text = resultdata.text[0];
+    const textDiv = document.
 }
 
 newfact();
