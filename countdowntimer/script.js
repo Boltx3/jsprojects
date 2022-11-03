@@ -2,7 +2,7 @@ const daysElement = document.getElementById("days");
 const hoursElement = document.getElementById("hours");
 const minElement = document.getElementById("mins");
 const secElement = document.getElementById("secs");
-const birthday = "16 Sept 2022";
+const birthday = "16 Sept 2024";
 
 function countdown(){
     const birthdayDate = new Date(birthday);
