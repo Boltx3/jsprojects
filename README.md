@@ -8,3 +8,5 @@ I am coding 100 Javascript projects, examples, and showcases. This will be done 
         Pop up modal
 3.  Funfacts
         Random fact generator using API calls.
+4. Calculator
+        Created a calculator
