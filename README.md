@@ -6,3 +6,5 @@ I am coding 100 Javascript projects, examples, and showcases. This will be done 
         Countdown timer using vanilla js
 2. Modal
         Pop up modal
+3.  Funfacts
+        Random fact generator using API calls.
