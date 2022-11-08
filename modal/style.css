@@ -1,38 +1,40 @@
 *{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-sizing: border-box;
+    background-color: gray;
 }
 
 button {
     border-radius: 2rem;
+    cursor: pointer;
+}
+
+button:active {
+    opacity: 0.8;
 }
 
 .modal {
-    display: none;
+    display: flex;
+    opacity:  0;
     position: fixed;
-    z-index: 1;
+    z-index: -1;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-
+    bottom: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
 }
 .modal-inner {
-    color:red;
-    padding: 20px;
-    font-size: 28px;
-    font-weight: bold;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow:  0 1px 4px rgba(0, 0, 0, 0.3);
+    padding: 15px 25px;
+    text-align: center;
+    width: 380px;
 }
 
-.close {
-    font-size: 28px;
-    font-weight:bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.modal.open {
+    opacity: 1;
+    z-index:  999;
 }
