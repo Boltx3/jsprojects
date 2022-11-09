@@ -3,19 +3,68 @@ body {
     margin: 0;
 }
 
+button {
+    border-radius: 2rem;
+}
+
+
 .calculator-grid {
+    background-color: gray;
+    position: center;
     display: grid;
     justify-content:  center;
     align-content: center;
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+}
+
+.calculator-grid > button:hover {
+    background-color: rgba(158, 30, 30, 0.9);
+}
+
+.operands {
+    background-color: rgb(255, 153, 0);
+    color: rgba(255, 255, 255);
+}
+
+.numbers {
+    background-color: rgb(0, 0, 0, 0.5);
+    color: rgba(255,255,255);
+}
+
+.other {
+    background-color: rgba(73, 73, 73, 0.5);
+    color: rgba(255,255,255);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.span-two .numbers {
+    background-color: rgb(0, 0, 0, 0.5);
+    color: rgba(255,255,255);
 }
 
 .output {
     grid-column: 1/ -1;
-    background-color: red;
+    background-color: rgb(255, 208, 0);
+    display:flex;
+    align-items: flex-end;
+    justify-content:  space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .output .prev_operand {
-    
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
 }
