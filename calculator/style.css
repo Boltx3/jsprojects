@@ -3,10 +3,6 @@ body {
     margin: 0;
 }
 
-button {
-    border-radius: 2rem;
-}
-
 
 .calculator-grid {
     background-color: gray;
@@ -22,6 +18,7 @@ button {
     cursor: pointer;
     font-size: 2rem;
     border: 1px solid white;
+    border-radius: 2rem;
 }
 
 .calculator-grid > button:hover {
@@ -54,7 +51,7 @@ button {
 
 .output {
     grid-column: 1/ -1;
-    background-color: rgb(255, 208, 0);
+    background-color: rgb(255, 255, 255 .75);
     display:flex;
     align-items: flex-end;
     justify-content:  space-around;
@@ -65,6 +62,6 @@ button {
 }
 
 .output .prev_operand {
-    color: rgba(255, 255, 255, .75);
+    color: rgba(0, 0, 0, 0.75);
     font-size: 1.5rem;
 }
