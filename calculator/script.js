@@ -17,19 +17,19 @@ class Calculator {
         this.currentOperand = this.currentOperand.toString().slice(0,-1)
     }
     //Append current number to currentOperand
-    appendNumber(numer) {
+    appendNumber(number) {
         if (number == '.' && this.currentOperand.includes('.')) return
         this.currentOperand = this.currentOperand.toString() + number.toString()
     }
 
     chooseOperation(operation) {
-        if (this.currentOperand === '') return
-        if (this.previousOperand !== '') {
+        if (this.currentOperand === ' ') return
+        if (this.previousOperand !== ' ') {
             this.compute()
         }
-        this.operation= operation
+        this.operation = operation
         this.previousOperand = this.currentOperand
-        this.currentOperand = ''
+        this.currentOperand = ' '
     }
 
     compute() {
@@ -55,7 +55,7 @@ class Calculator {
         }
         this.currentOperand = computation
         this.operation = undefined
-        this.previousOperand = ''
+        this.previousOperand = ' '
     }
     
     getDisplayNumber(number) {
@@ -65,9 +65,11 @@ class Calculator {
         let integerDisplay
         if (isNaN(integerDigits)) {
             integerDisplay = ' '
+        } else {
+            integerDisplay = integerDigits.toLocaleString('en', { maximumFractionDigits: 0 })
         }
         if (decimalDigits != null) {
-            return '${integerDisplay.${decimalDigits}'
+            return '${integerDisplay}.${decimalDigits}'
         } else {
             return integerDisplay
             }
@@ -78,14 +80,14 @@ class Calculator {
             this.getDisplayNumber(this.currentOperand)
         if (this.operation != null) {
             this.previousOperandandTextElement.innertext =
-                '${this.getDisplayNumer(this.previousOperdand)} ${this.operation}'
+                '${this.getDisplayNumber(this.previousOperand)} ${this.operation}'
             } else {
                     this.previousOperandTextElement.innerText =  ' '
             }
         }
 }
 
-const numberButtons = document.querySelectorAll('[numbers]')
+const numberButtons = document.querySelectorAll('[data-numbers]')
 const operationButtons = document.querySelectorAll('[data-operation]')
 const equalsButton = document.querySelectorAll('[data-equals]')
 const deleteButton = document.querySelectorAll('[data-delete]')

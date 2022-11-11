@@ -65,3 +65,8 @@ body {
     color: rgba(0, 0, 0, 0.75);
     font-size: 1.5rem;
 }
+
+.output .current_operand {
+    color:rgba(0, 0, 0, 0.75);
+    font-size: 1.5rem;
+}
