@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+.main_body {
+    background-color: purple;
+}
+
+.food_img {
+    background-color: red;
+    padding: 0px;
+    margin: 0px;
+}
+
