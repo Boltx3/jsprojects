@@ -1,7 +1,7 @@
 let counterDisplay = document.querySelector('.counter-display');
 let counterPlus = document.querySelector('.counter-plus');
 let counterMinus = document.querySelector('.counter-minus');
-let counterRest = document.querySelector('.counter-reset');
+let counterReset = document.querySelector('.counter-reset');
 
 let count = 0;
 
@@ -15,8 +15,9 @@ counterMinus.addEventListener("click", () => {
     updateDisplay();
 })
 
-counterRest.addEventListener("click", () => {
+counterReset.addEventListener("click", () => {
     count = 0;
+    updateDisplay();
 })
 
 function updateDisplay() {
