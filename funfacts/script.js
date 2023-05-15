@@ -9,9 +9,8 @@ async function newfact() {
     return resultdata;
 }
 
-function displayFact (data){
+function displayFact (resultdata){
     const text = resultdata.text[0];
-    const textDiv = document.
 }
 
 newfact();
