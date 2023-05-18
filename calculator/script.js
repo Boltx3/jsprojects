@@ -95,12 +95,13 @@ const allClearButton = document.querySelectorAll('[data-all-clear]')
 const previousOperandTextElement = document.querySelectorAll('[data-previous-operand]')
 const currentOperandTextElement = document.querySelectorAll('[data-current-operand]')
 
-const calculator = new Calculator(previousOperandandTextElement, currentOperandTextElement)
+const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
-numberButtons.forEach(button => {
+numberButtons.forEach(button =>  {
     button.addEventListener('click', ( ) => {
         calculator.appendNumber(button.innerText)
         calculator.updateDisplay()
+        console.log("test");
     })
 })
 
@@ -109,19 +110,19 @@ operationButtons.forEach(button => {
         calculator.chooseOperation(button.innerText)
         calculator.updateDisplay()
     })
-})
+});
 
-equalsButton.addEventListener('click', button => {
-    calculator.clear( )
-    calculator.updateDisplay( )
-})
+// equalsButton.addEventListener('click', button => {
+//     calculator.clear( )
+//     calculator.updateDisplay( )
+// });
 
-allClearButton.addEventListener('click', button => {
-    calculator.clear()
-    calculator.updateDisplay()
-})
+// allClearButton.addEventListener('click', button => {
+//     calculator.clear()
+//     calculator.updateDisplay()
+// });
 
-deleteButton.addEventListener('click',button => {
-    calculator.delete( )
-    calculator.updateDisplay( )
-})
+// deleteButton.addEventListener('click',button => {
+//     calculator.delete( )
+//     calculator.updateDisplay( )
+// });
